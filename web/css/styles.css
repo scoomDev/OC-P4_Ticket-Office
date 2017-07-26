@@ -1,0 +1,10 @@
+.title-index {
+    margin-top: 100px;
+}
+
+.choose-date {
+    font-size: 1.2rem;
+}
+.choose-date:hover {
+    cursor: pointer;
+}

@@ -9,15 +9,19 @@
     {% block stylesheet %}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+    <!-- Personal CSS -->
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     {% endblock stylesheet %}
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="brown darken-3">
             <div class="nav-wrapper">
                 <div class="container">
-                    <a href="{{ path('tl_core_homepage') }}" class="brand-logo center">Billetterie</a>
+                    <a href="{{ path('tl_core_homepage') }}" class="brand-logo center">Le Louvre</a>
                 </div>
+            </div>
+            {% include "TLCoreBundle:Core:inc/breadcrumbs.html.twig" %}
             </div>
         </nav>
     </header>
@@ -25,9 +29,22 @@
     {% block body %}
     {% endblock body %}
 
+    <footer class="page-footer brown darken-3">
+        <div class="footer-copyright">
+            <div class="container">
+                &copy; Copyright {{ 'now' | date('Y') }} Le Louvre
+                <a class="white-text right" href="http://scoomdev.eu" target="_blank">Webmaster</a>
+            </div>
+        </div>
+    </footer>
+
     {% block javascript %}
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+    <!-- Personal JS -->
+    <script src="{{ asset('js/initMaterialize.js') }}"></script>
+    <script src="{{ asset('js/pickadate_fr.js') }}"></script>
     {% endblock javascript %}
 </body>
 </html>

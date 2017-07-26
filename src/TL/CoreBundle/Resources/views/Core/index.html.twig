@@ -6,6 +6,40 @@
 
 {% block body %}
     <div class="container">
-        <h1>Hello world</h1>
+        <h4 class="title-index">Billetterie</h4>
+        <div class="row">
+            <div class="card-panel col l7 s12">
+                <h5>Informations</h5>
+                <hr>
+                <table>
+                    <tr>
+                        <td class="teal-text"><i class="material-icons">schedule</i></td>
+                        <td>Horaires</td>
+                        <td>Lundi, jeudi, samedi, dimanche : 9h00 - 18h00. Mercredi, vendredi : 9h00 - 21h45.</td>
+                    </tr>
+                    <tr>
+                        <td class="red-text"><i class="material-icons">highlight_off</i></td>
+                        <td>Fermé</td>
+                        <td>Tout les mardis et les 1er mai, 1er novembre et 25 décembre.</td>
+                    </tr>
+                    <tr>
+                        <td class="teal-text"><i class="material-icons">info_outline</i></td>
+                        <td>Types</td>
+                        <td>Journée et demi-journée (à partir de 14h).</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col offset-l1 l4 s12">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/louvre.jpg') }}" alt="">
+                    </div>
+                    <div class="card-content">
+                        <label class="choose-date grey-text text-darken-4" for="date">Choisissez votre date</label>
+                        <input id="date" type="text" class="datepicker">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock body %}
