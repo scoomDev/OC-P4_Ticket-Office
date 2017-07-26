@@ -1,0 +1,3 @@
+tl_core:
+    resource: "@TLCoreBundle/Resources/config/routing.yml"
+    prefix:   /
