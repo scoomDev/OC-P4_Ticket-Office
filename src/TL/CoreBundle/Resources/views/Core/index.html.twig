@@ -35,8 +35,19 @@
                         <img src="{{ asset('img/louvre.jpg') }}" alt="">
                     </div>
                     <div class="card-content">
-                        <label class="choose-date grey-text text-darken-4" for="date">Choisissez votre date</label>
-                        <input id="date" type="text" class="datepicker">
+                        <div class="input-field">
+                            <label class="choose-date" for="tl_corebundle_date_date">Choisissez votre date</label>
+                            <input type="text" class="datepicker">
+                        </div>
+                        <div class="input-field">
+                            <label for="nbr_person">Pour combien de personne</label>
+                            <input type="number" id="nbr_person" name="nbr_person" value="1">
+                        </div>
+                        <div class="mt_btn right-align">
+                            <button class="btn btn-large green lighten-1" type="submit">
+                                <i class="material-icons tiny left">save</i> Réserver
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

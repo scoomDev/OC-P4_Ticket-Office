@@ -1,3 +1,7 @@
 tl_core_homepage:
     path:     /
     defaults: { _controller: TLCoreBundle:Core:index }
+
+tl_core_informations:
+    path:     /informations/{date}
+    defaults: { _controller: TLCoreBundle:Core:informations }
