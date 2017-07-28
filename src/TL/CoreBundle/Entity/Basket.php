@@ -64,11 +64,6 @@ class Basket
     private $nbrTicket;
 
     /**
-     * @ORM\OneToMany(targetEntity="TL\CoreBundle\Entity\Ticket", mappedBy="basket")
-     */
-    private $tickets;
-
-    /**
      * Constructor
      */
     public function __construct()

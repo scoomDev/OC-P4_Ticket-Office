@@ -5,6 +5,10 @@ namespace TL\CoreBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+
+use \TL\CoreBundle\Form\TicketType;
 
 class BasketType extends AbstractType
 {
@@ -14,12 +18,12 @@ class BasketType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('day')
-            ->add('name')
-            ->add('email')
-            ->add('isPayed')
-            ->add('totalPrice')
-            ->add('nbrTicket');
+            ->add('email', EmailType::class, ['label' => 'Votre email'])
+            ->add('tickets', CollectionType::class, [
+                'entry_type' => TicketType::class,
+                'allow_add' => true,
+                'allow_delete' => true
+            ]);
     }
     
     /**

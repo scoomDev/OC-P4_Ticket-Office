@@ -64,10 +64,8 @@ class Ticket
     private $isWholeDay;
 
     /**
-     * @ORM\ManyToOne(targetEntity="TL\CoreBundle\Entity\Basket", inversedBy="tickets")
+     * @ORM\ManyToOne(targetEntity="TL\CoreBundle\Entity\Basket")
      * @ORM\JoinColumn(nullable=false)
-     *
-     * @var TL\CoreBundle\Entity\Basket
      */
     private $basket;
 

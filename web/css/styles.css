@@ -8,3 +8,14 @@
 .choose-date:hover {
     cursor: pointer;
 }
+
+/* FORM STYLES
+---------------------- */
+/* Tickets */
+#tl_corebundle_basket_tickets_ticket1{
+    margin-top: 50px;
+}
+
+#tl_corebundle_basket_tickets_ticket1 .row{
+    margin-bottom: 10px;
+}

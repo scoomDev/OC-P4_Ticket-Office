@@ -20,4 +20,8 @@ $(document).ready(function(){
             new Date((year+2),04,01),
         ]
     });
+    $.each($(':checkbox'), function(k, v) { 
+        var label = $('label[for="' + this.id + '"]'); 
+        $(this).insertBefore(label); 
+    });
 });

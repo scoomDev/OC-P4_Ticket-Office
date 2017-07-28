@@ -8,16 +8,36 @@
     <div class="container">
         <h3>Renseignements</h3>
         <div class="row">
+            <div class="col l7 s12">
+                {% form_theme formInfo 'form/materialize_layout.html.twig'%}
+
+                {{ form_start(formInfo) }}
+
+                {{ form_row(formInfo.email) }}
+                {{ form_row(formInfo.tickets) }}
+
+                {{ form_rest(formInfo) }}
+
+                <div class="mt_btn right-align">
+                    <button class="btn btn-large green lighten-1" type="submit">
+                        <i class="material-icons tiny left">save</i> Réserver
+                    </button>
+                </div>
+                {{ form_end(formInfo) }} 
+            </div>
+
             <div class="col offset-l1 l4 s12">
                 <div class="card">
                     <div class="card-content">
                         <p>Pour le :</p>
                         {{ date }}
-                        <p>Nombre de personnes :</p>
+                        <p>Nombre de personnes : {{ nbrPerson }}</p>
+                        <input type="hidden" name="_nbrPerson" value="{{ nbrPerson }}">
                     </div>
                 </div>
             </div>
         </div>
+        
         
     </div>
 {% endblock body %}

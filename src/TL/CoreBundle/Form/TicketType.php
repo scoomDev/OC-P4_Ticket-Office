@@ -5,6 +5,8 @@ namespace TL\CoreBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class TicketType extends AbstractType
 {
@@ -14,13 +16,16 @@ class TicketType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('firstName')
-            ->add('birthday')
-            ->add('isReduced')
-            ->add('price')
-            ->add('isWholeDay')
-            ->add('basket');
+            ->add('name', TextType::class, ['label' => 'Nom'])
+            ->add('firstName', TextType::class, ['label' => 'Prénom'])
+            ->add('isReduced', CheckboxType::class, [
+                'label' => 'Tarif réduit',
+                'required' => false
+                ])
+            ->add('isWholeDay', CheckboxType::class, [
+                'label' => 'journée',
+                'required' => false
+                ]);
     }
     
     /**
